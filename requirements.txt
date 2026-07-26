@@ -1,0 +1,5 @@
+strands-agents
+strands-agents-evals
+ollama
+python-dotenv
+pytest
