@@ -1,5 +1,11 @@
 # Strands Agents - Patrón de Orquestación Agents As Tools
 
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat&logo=python&logoColor=white)
+![Strands Agents](https://img.shields.io/badge/Strands_Agents-Framework-FF9900?style=flat&logo=amazonaws&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-Local_LLM-000000?style=flat&logo=ollama&logoColor=white)
+![Gemma](https://img.shields.io/badge/Gemma-gemma4:e2b--it--qat-4285F4?style=flat&logo=google&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat)
+
 Este es un ejemplo educativo del patrón de orquestación Agents As Tools del framework Strands Agents. Es un patrón jerárquico (hub-and-spoke) donde un orquestador delega tareas a agentes especializados. 
 Cuando usar? Sabes de antemano quién hace qué, y querés que un "manager" delegue tareas específicas sin que el ruido de cada especialista contamine el contexto principal.
 
