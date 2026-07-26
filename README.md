@@ -1,7 +1,7 @@
-# Strands Agents - Patron de Orquestacion Agents As Tools
+# Strands Agents - Patrón de Orquestación Agents As Tools
 
-Este es un ejemplo educativo del patron de orquestacion Agents As Tools del framework Strands Agents. Es un patron jerarquico (hub-and-spoke) donde un orquestador delega tareas a agentes especializados. 
-Cuando usar? Sabés de antemano quién hace qué, y querés que un "manager" delegue tareas específicas sin que el ruido de cada especialista contamine el contexto principal.
+Este es un ejemplo educativo del patrón de orquestación Agents As Tools del framework Strands Agents. Es un patrón jerárquico (hub-and-spoke) donde un orquestador delega tareas a agentes especializados. 
+Cuando usar? Sabes de antemano quién hace qué, y querés que un "manager" delegue tareas específicas sin que el ruido de cada especialista contamine el contexto principal.
 
 La idea principal es mostrar como se puede estructurar y testear localmente por medio de Ollama con el pequeño modelo gemma4:e2b-it-qat sin la necesidad de desplegar en AWS.
 
@@ -13,7 +13,7 @@ El caso de uso es la automatización del soporte básico de TI. Se recibe un tic
 ## Estructura de carpetas
 
 ```
-agents-as-tools
+strands-agents-as-tools
 ├── README.md
 ├── requirements.txt
 ├── .env.example
@@ -387,4 +387,6 @@ Este script ejecuta dos metodologías de evaluación según las especificaciones
 - [Ollama — Modelos locales](https://ollama.com/)
 
 ## Licencia 
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
 
