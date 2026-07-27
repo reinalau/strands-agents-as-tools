@@ -154,39 +154,46 @@ Los tres eventos que usa:
 
 ### 1. Requisitos Previos e Instalación
 
-1. Tener Docker Desktop instalado y corriendo.
+1. Clonar el repositorio:
 
-2. Levantar el servidor de Ollama con un volumen persistente (para que el modelo no se vuelva a descargar si el contenedor se recrea):
+   ```bash
+   git clone https://github.com/reinalau/strands-agents-as-tools.git
+   cd strands-agents-as-tools
+   ```
+
+2. Tener Docker Desktop instalado y corriendo.
+
+3. Levantar el servidor de Ollama con un volumen persistente (para que el modelo no se vuelva a descargar si el contenedor se recrea):
 
    ```bash
    docker run -d --name ollama -p 11434:11434 -v ollama_data:/root/.ollama ollama/ollama
    ```
 
-3. Descargar el modelo (solo la primera vez; con el volumen montado, quedará guardado):
+4. Descargar el modelo (solo la primera vez; con el volumen montado, quedará guardado):
 
    ```bash
    docker exec -it ollama ollama pull gemma4:e2b-it-qat
    ```
 
-4. Probar que el modelo responde:
+5. Probar que el modelo responde:
 
    ```bash
    docker exec -it ollama ollama run gemma4:e2b-it-qat
    ```
 Interactuar con el modelo diciendo al menos "hola" y verificar si contesta. La manera de salir es presionar Ctrl + d o /bye
 
-5. Verificar que el modelo está corriendo:
+6. Verificar que el modelo está corriendo:
 
    ```bash
    docker exec -it ollama ollama ps
    ```
 
-6. Entorno Virtual 
+7. Entorno Virtual 
 ```bash
 pip install -r requirements.txt
 ```
 
-7. Variables de Entorno 
+8. Variables de Entorno 
 ```bash
 cp .env.example .env
 ```
