@@ -45,18 +45,18 @@ strands-agents-as-tools
 │   │
 │   └── hooks/
 │       ├── __init__.py
-│       └── security_verification_hook.py   # SteeringHandler de dominio
+│       └── security_verification_hook.py   # Domain SteeringHandler
 │
 ├── examples/
 │   └── sample_tickets.py
 │
 ├── evals/
 │   ├── __init__.py
-│   ├── eval_cases.py                 # Casos con inputs, agent esperado y keywords
-│   └── run_evals.py                  # Evaluador dual: Trayectoria (Tool Call) + Output (Keywords)
+│   ├── eval_cases.py                 # Cases with inputs, expected agent and keywords
+│   └── run_evals.py                  # Dual evaluator: Trajectory (Tool Call) + Output (Keywords)
 │
 └── tests/
-    └── test_agents.py                # Tests unitarios de tools (sin LLM)
+    └── test_agents.py                # Unit tests for tools (no LLM)
 ```
 
 ---
