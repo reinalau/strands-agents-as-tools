@@ -400,6 +400,8 @@ Este script ejecuta dos metodologías de evaluación según las especificaciones
 - [Strands Agents — Multi-agent patterns](https://strandsagents.com/latest/user-guide/concepts/multi-agent/)
 - [Strands Agents — Evals](https://strandsagents.com/docs/user-guide/evals-sdk/evaluators/)
 - [Ollama — Modelos locales](https://ollama.com/)
+- [Artículo relacionado](https://builder.aws.com/content/3GmRe87jkx3NhuN7t43nx1jW5se/agents-as-tools-en-strands-orquestacion-jerarquica-en-local-con-gemma-4-y-ollama)
+
 
 ## Licencia 
 
