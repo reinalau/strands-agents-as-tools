@@ -1,12 +1,12 @@
 # Strands Agents - Patrón de Orquestación Agents As Tools
 
 ![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat&logo=python&logoColor=white)
-![Strands Agents](https://img.shields.io/badge/Strands_Agents-Framework-FF9900?style=flat&logo=amazonaws&logoColor=white)
+![Strands Agents](https://img.shields.io/badge/Strands_Agents-SDK-FF9900?style=flat&logo=amazonaws&logoColor=white)
 ![Ollama](https://img.shields.io/badge/Ollama-Local_LLM-000000?style=flat&logo=ollama&logoColor=white)
 ![Gemma](https://img.shields.io/badge/Gemma-gemma4:e2b--it--qat-4285F4?style=flat&logo=google&logoColor=white)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat)
 
-Este es un ejemplo educativo del patrón de orquestación Agents As Tools del framework Strands Agents. Es un patrón jerárquico (hub-and-spoke) donde un orquestador delega tareas a agentes especializados. 
+Este es un ejemplo educativo del patrón de orquestación Agents As Tools del SDK Strands Agents. Es un patrón jerárquico (hub-and-spoke) donde un orquestador delega tareas a agentes especializados. 
 Cuando usar? Sabes de antemano quién hace qué, y querés que un "manager" delegue tareas específicas sin que el ruido de cada especialista contamine el contexto principal.
 
 La idea principal es mostrar como se puede estructurar y testear localmente por medio de Ollama con el pequeño modelo gemma4:e2b-it-qat sin la necesidad de desplegar en AWS.
@@ -67,7 +67,7 @@ strands-agents-as-tools
 
 El patrón **Agents-as-Tools** (hub-and-spoke) consiste en exponer agentes especializados como herramientas (`@tool`) que el agente orquestador puede invocar. Cada agente especialista vive en su propio contexto aislado: el orquestador nunca accede al historial interno ni a las tools del especialista, solo recibe el resultado final como string.
 
-En Strands esto se implementa con dos primitivas del framework:
+En Strands esto se implementa con dos primitivas del SDK:
 
 ```python
 # 1. Cada especialista es un Agent con tools y system_prompt propios
@@ -115,7 +115,7 @@ orchestrator = Agent(..., conversation_manager=conv_manager)
 
 **audit_ip_address → revoke_access_token** (en ese orden, siempre)
 
-Si el LLM intenta llamar a `revoke_access_token` sin haber auditado primero la IP, el hook lo bloquea con `event.cancel_tool` antes de que la función se ejecute. Esto demuestra el uso del framework para imponer lógica de negocio determinista, sin depender del criterio del modelo.
+Si el LLM intenta llamar a `revoke_access_token` sin haber auditado primero la IP, el hook lo bloquea con `event.cancel_tool` antes de que la función se ejecute. Esto demuestra el uso del SDK para imponer lógica de negocio determinista, sin depender del criterio del modelo.
 
 Los tres eventos que usa:
 
